@@ -6,6 +6,6 @@ COPY . .
 
 RUN go mod tidy
 
-RUN go build -o /main main.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
 
-CMD ["/main"]
+CMD ["/12th_sprint.exe"]
